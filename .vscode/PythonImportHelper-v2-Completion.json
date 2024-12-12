@@ -1,0 +1,230 @@
+[
+    {
+        "label": "Auth",
+        "importPath": "auth",
+        "description": "auth",
+        "isExtraImport": true,
+        "detail": "auth",
+        "documentation": {}
+    },
+    {
+        "label": "Auth",
+        "importPath": "auth",
+        "description": "auth",
+        "isExtraImport": true,
+        "detail": "auth",
+        "documentation": {}
+    },
+    {
+        "label": "Auth",
+        "importPath": "auth",
+        "description": "auth",
+        "isExtraImport": true,
+        "detail": "auth",
+        "documentation": {}
+    },
+    {
+        "label": "Auth",
+        "importPath": "auth",
+        "description": "auth",
+        "isExtraImport": true,
+        "detail": "auth",
+        "documentation": {}
+    },
+    {
+        "label": "create_connection",
+        "importPath": "dbConnection",
+        "description": "dbConnection",
+        "isExtraImport": true,
+        "detail": "dbConnection",
+        "documentation": {}
+    },
+    {
+        "label": "create_connection",
+        "importPath": "dbConnection",
+        "description": "dbConnection",
+        "isExtraImport": true,
+        "detail": "dbConnection",
+        "documentation": {}
+    },
+    {
+        "label": "create_connection",
+        "importPath": "dbConnection",
+        "description": "dbConnection",
+        "isExtraImport": true,
+        "detail": "dbConnection",
+        "documentation": {}
+    },
+    {
+        "label": "create_connection",
+        "importPath": "dbConnection",
+        "description": "dbConnection",
+        "isExtraImport": true,
+        "detail": "dbConnection",
+        "documentation": {}
+    },
+    {
+        "label": "tabulate",
+        "importPath": "tabulate",
+        "description": "tabulate",
+        "isExtraImport": true,
+        "detail": "tabulate",
+        "documentation": {}
+    },
+    {
+        "label": "tabulate",
+        "importPath": "tabulate",
+        "description": "tabulate",
+        "isExtraImport": true,
+        "detail": "tabulate",
+        "documentation": {}
+    },
+    {
+        "label": "tabulate",
+        "importPath": "tabulate",
+        "description": "tabulate",
+        "isExtraImport": true,
+        "detail": "tabulate",
+        "documentation": {}
+    },
+    {
+        "label": "getpass",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "getpass",
+        "description": "getpass",
+        "detail": "getpass",
+        "documentation": {}
+    },
+    {
+        "label": "mysql.connector",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "mysql.connector",
+        "description": "mysql.connector",
+        "detail": "mysql.connector",
+        "documentation": {}
+    },
+    {
+        "label": "Error",
+        "importPath": "mysql.connector",
+        "description": "mysql.connector",
+        "isExtraImport": true,
+        "detail": "mysql.connector",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "Admin",
+        "importPath": "admin",
+        "description": "admin",
+        "isExtraImport": true,
+        "detail": "admin",
+        "documentation": {}
+    },
+    {
+        "label": "Driver",
+        "importPath": "driver",
+        "description": "driver",
+        "isExtraImport": true,
+        "detail": "driver",
+        "documentation": {}
+    },
+    {
+        "label": "Passenger",
+        "importPath": "passenger",
+        "description": "passenger",
+        "isExtraImport": true,
+        "detail": "passenger",
+        "documentation": {}
+    },
+    {
+        "label": "Admin",
+        "kind": 6,
+        "importPath": "admin",
+        "description": "admin",
+        "peekOfCode": "class Admin:\n    def __init__(self, user):\n        self.user = user\n    def menu(self):\n        while True:\n            print(\"\\nAdmin Menu:\")\n            print(\"1. View All Users\")\n            print(\"2. Add Vehicle\")\n            print(\"3. View Feedback\")\n            print(\"4. View Transactions\")",
+        "detail": "admin",
+        "documentation": {}
+    },
+    {
+        "label": "connection",
+        "kind": 5,
+        "importPath": "admin",
+        "description": "admin",
+        "peekOfCode": "connection = create_connection()\nclass Admin:\n    def __init__(self, user):\n        self.user = user\n    def menu(self):\n        while True:\n            print(\"\\nAdmin Menu:\")\n            print(\"1. View All Users\")\n            print(\"2. Add Vehicle\")\n            print(\"3. View Feedback\")",
+        "detail": "admin",
+        "documentation": {}
+    },
+    {
+        "label": "Auth",
+        "kind": 6,
+        "importPath": "auth",
+        "description": "auth",
+        "peekOfCode": "class Auth:\n    @staticmethod\n    def login():\n        email = input(\"Enter Email: \")\n        password = getpass.getpass(\"Enter Password: \")\n        try:\n            cursor = connection.cursor(dictionary=True)\n            query = f\"SELECT * FROM User WHERE Email = '{email}' AND Password = '{password}'\"  \n            cursor.execute(query)\n            user = cursor.fetchone()",
+        "detail": "auth",
+        "documentation": {}
+    },
+    {
+        "label": "connection",
+        "kind": 5,
+        "importPath": "auth",
+        "description": "auth",
+        "peekOfCode": "connection = create_connection()\nclass Auth:\n    @staticmethod\n    def login():\n        email = input(\"Enter Email: \")\n        password = getpass.getpass(\"Enter Password: \")\n        try:\n            cursor = connection.cursor(dictionary=True)\n            query = f\"SELECT * FROM User WHERE Email = '{email}' AND Password = '{password}'\"  \n            cursor.execute(query)",
+        "detail": "auth",
+        "documentation": {}
+    },
+    {
+        "label": "create_connection",
+        "kind": 2,
+        "importPath": "dbConnection",
+        "description": "dbConnection",
+        "peekOfCode": "def create_connection():\n    try:\n        connection = mysql.connector.connect(\n            host='127.0.0.1',  \n            user='root',        \n            password='quvqcro',  \n            database='transport_ms'\n        )\n        if connection.is_connected():\n            print(\"Connected to MySQL Database\")",
+        "detail": "dbConnection",
+        "documentation": {}
+    },
+    {
+        "label": "Driver",
+        "kind": 6,
+        "importPath": "driver",
+        "description": "driver",
+        "peekOfCode": "class Driver:\n    def __init__(self, user):\n        self.user = user\n    def menu(self):\n        while True:\n            print(\"\\nDriver Menu:\")\n            print(\"1. View Assigned Trips\")\n            print(\"2. Update Trip Status\")\n            print(\"3. Logout\")\n            choice = input(\"Enter your choice: \")",
+        "detail": "driver",
+        "documentation": {}
+    },
+    {
+        "label": "connection",
+        "kind": 5,
+        "importPath": "driver",
+        "description": "driver",
+        "peekOfCode": "connection = create_connection()\nclass Driver:\n    def __init__(self, user):\n        self.user = user\n    def menu(self):\n        while True:\n            print(\"\\nDriver Menu:\")\n            print(\"1. View Assigned Trips\")\n            print(\"2. Update Trip Status\")\n            print(\"3. Logout\")",
+        "detail": "driver",
+        "documentation": {}
+    },
+    {
+        "label": "Passenger",
+        "kind": 6,
+        "importPath": "passenger",
+        "description": "passenger",
+        "peekOfCode": "class Passenger:\n    def __init__(self, user):\n        self.user = user\n    def menu(self):\n        while True:\n            print(\"\\nPassenger Menu:\")\n            print(\"1. View Available Trips\")\n            print(\"2. Book a Trip\")\n            print(\"3. View My Booked Trips\")\n            print(\"4. Provide Feedback\")",
+        "detail": "passenger",
+        "documentation": {}
+    },
+    {
+        "label": "connection",
+        "kind": 5,
+        "importPath": "passenger",
+        "description": "passenger",
+        "peekOfCode": "connection = create_connection()\nclass Passenger:\n    def __init__(self, user):\n        self.user = user\n    def menu(self):\n        while True:\n            print(\"\\nPassenger Menu:\")\n            print(\"1. View Available Trips\")\n            print(\"2. Book a Trip\")\n            print(\"3. View My Booked Trips\")",
+        "detail": "passenger",
+        "documentation": {}
+    }
+]
