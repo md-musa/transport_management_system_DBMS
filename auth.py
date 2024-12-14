@@ -1,4 +1,3 @@
-import getpass
 from dbConnection import create_connection
 
 connection = create_connection()
@@ -7,7 +6,7 @@ class Auth:
     @staticmethod
     def login():
         email = input("Enter Email: ")
-        password = getpass.getpass("Enter Password: ")
+        password = input("Enter Password: ")
 
         try:
             cursor = connection.cursor(dictionary=True)
@@ -16,7 +15,10 @@ class Auth:
             user = cursor.fetchone()
 
             if user:
-                print(f"Welcome, {user['Name']}! Your role is {user['Role']}.")
+                print("Logged in successfully ")
+                print("+-----------------------------------------+")
+                print(f"| Name: {user['Name']},  Role: {user['Role']}       |.")
+                print("+-----------------------------------------+")
                 return user
             else:
                 print("Invalid credentials. Please try again.")

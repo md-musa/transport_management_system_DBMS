@@ -1,6 +1,6 @@
 from auth import Auth
 from dbConnection import create_connection
-from tabulate import tabulate  # Import the tabulate library
+from tabulate import tabulate  
 
 connection = create_connection()
 
@@ -17,7 +17,7 @@ class Passenger:
             print("4. Provide Feedback")
             print("5. Logout")
 
-            choice = input("Enter your choice: ")
+            choice = input("Enter your choice:z ")
             if choice == '1':
                 self.view_trips()
             elif choice == '2':
@@ -53,11 +53,10 @@ class Passenger:
         trip_id = self.validate_int("Enter Trip ID to book: ")
         seats = self.validate_int("Enter number of seats: ")
 
-        # Calculate total fare (Assuming fare is based on seat count and vehicle capacity)
         cursor = connection.cursor()
         cursor.execute(f"SELECT v.Capacity FROM Vehicle v JOIN Trip t ON v.Vehicle_ID = t.Vehicle_ID WHERE t.Trip_ID = {trip_id}")
         vehicle_capacity = cursor.fetchone()
-        total_fare = seats * 100  # Just an example fare logic (100 per seat)
+        total_fare = seats * 100  
 
         query = f"""
             INSERT INTO Booking (Trip_ID, Passenger_ID, Booking_Date, Seats_Booked, Total_Fare, Payment_Status)

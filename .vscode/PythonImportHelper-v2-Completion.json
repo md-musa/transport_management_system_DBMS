@@ -88,15 +88,6 @@
         "documentation": {}
     },
     {
-        "label": "getpass",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "getpass",
-        "description": "getpass",
-        "detail": "getpass",
-        "documentation": {}
-    },
-    {
         "label": "mysql.connector",
         "kind": 6,
         "isExtraImport": true,
@@ -151,7 +142,7 @@
         "kind": 6,
         "importPath": "admin",
         "description": "admin",
-        "peekOfCode": "class Admin:\n    def __init__(self, user):\n        self.user = user\n    def menu(self):\n        while True:\n            print(\"\\nAdmin Menu:\")\n            print(\"1. View All Users\")\n            print(\"2. Add Vehicle\")\n            print(\"3. View Feedback\")\n            print(\"4. View Transactions\")",
+        "peekOfCode": "class Admin:\n    def __init__(self, user):\n        self.user = user\n    def menu(self):\n        while True:\n            print(\"\\nAdmin Menu:\")\n            print(\"1. View All Users\")\n            print(\"2. Add User\")\n            print(\"3. View Vehicle List\")\n            print(\"4. Add Vehicle\")",
         "detail": "admin",
         "documentation": {}
     },
@@ -160,7 +151,7 @@
         "kind": 5,
         "importPath": "admin",
         "description": "admin",
-        "peekOfCode": "connection = create_connection()\nclass Admin:\n    def __init__(self, user):\n        self.user = user\n    def menu(self):\n        while True:\n            print(\"\\nAdmin Menu:\")\n            print(\"1. View All Users\")\n            print(\"2. Add Vehicle\")\n            print(\"3. View Feedback\")",
+        "peekOfCode": "connection = create_connection()\nclass Admin:\n    def __init__(self, user):\n        self.user = user\n    def menu(self):\n        while True:\n            print(\"\\nAdmin Menu:\")\n            print(\"1. View All Users\")\n            print(\"2. Add User\")\n            print(\"3. View Vehicle List\")",
         "detail": "admin",
         "documentation": {}
     },
@@ -169,7 +160,7 @@
         "kind": 6,
         "importPath": "auth",
         "description": "auth",
-        "peekOfCode": "class Auth:\n    @staticmethod\n    def login():\n        email = input(\"Enter Email: \")\n        password = getpass.getpass(\"Enter Password: \")\n        try:\n            cursor = connection.cursor(dictionary=True)\n            query = f\"SELECT * FROM User WHERE Email = '{email}' AND Password = '{password}'\"  \n            cursor.execute(query)\n            user = cursor.fetchone()",
+        "peekOfCode": "class Auth:\n    @staticmethod\n    def login():\n        email = input(\"Enter Email: \")\n        password = input(\"Enter Password: \")\n        try:\n            cursor = connection.cursor(dictionary=True)\n            query = f\"SELECT * FROM User WHERE Email = '{email}' AND Password = '{password}'\"  \n            cursor.execute(query)\n            user = cursor.fetchone()",
         "detail": "auth",
         "documentation": {}
     },
@@ -178,7 +169,7 @@
         "kind": 5,
         "importPath": "auth",
         "description": "auth",
-        "peekOfCode": "connection = create_connection()\nclass Auth:\n    @staticmethod\n    def login():\n        email = input(\"Enter Email: \")\n        password = getpass.getpass(\"Enter Password: \")\n        try:\n            cursor = connection.cursor(dictionary=True)\n            query = f\"SELECT * FROM User WHERE Email = '{email}' AND Password = '{password}'\"  \n            cursor.execute(query)",
+        "peekOfCode": "connection = create_connection()\nclass Auth:\n    @staticmethod\n    def login():\n        email = input(\"Enter Email: \")\n        password = input(\"Enter Password: \")\n        try:\n            cursor = connection.cursor(dictionary=True)\n            query = f\"SELECT * FROM User WHERE Email = '{email}' AND Password = '{password}'\"  \n            cursor.execute(query)",
         "detail": "auth",
         "documentation": {}
     },
@@ -196,7 +187,7 @@
         "kind": 6,
         "importPath": "driver",
         "description": "driver",
-        "peekOfCode": "class Driver:\n    def __init__(self, user):\n        self.user = user\n    def menu(self):\n        while True:\n            print(\"\\nDriver Menu:\")\n            print(\"1. View Assigned Trips\")\n            print(\"2. Update Trip Status\")\n            print(\"3. Logout\")\n            choice = input(\"Enter your choice: \")",
+        "peekOfCode": "class Driver:\n    def __init__(self, user):\n        self.user = user\n    def menu(self):\n        while True:\n            print(\"\\nDriver Menu:\")\n            print(\"1. View Assigned Trips\") \n            print(\"2. Update Trip Status\")\n            print(\"3. Logout\")\n            choice = input(\"Enter your choice: \")",
         "detail": "driver",
         "documentation": {}
     },
@@ -205,7 +196,7 @@
         "kind": 5,
         "importPath": "driver",
         "description": "driver",
-        "peekOfCode": "connection = create_connection()\nclass Driver:\n    def __init__(self, user):\n        self.user = user\n    def menu(self):\n        while True:\n            print(\"\\nDriver Menu:\")\n            print(\"1. View Assigned Trips\")\n            print(\"2. Update Trip Status\")\n            print(\"3. Logout\")",
+        "peekOfCode": "connection = create_connection()\nclass Driver:\n    def __init__(self, user):\n        self.user = user\n    def menu(self):\n        while True:\n            print(\"\\nDriver Menu:\")\n            print(\"1. View Assigned Trips\") \n            print(\"2. Update Trip Status\")\n            print(\"3. Logout\")",
         "detail": "driver",
         "documentation": {}
     },

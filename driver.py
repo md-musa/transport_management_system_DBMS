@@ -11,7 +11,7 @@ class Driver:
     def menu(self):
         while True:
             print("\nDriver Menu:")
-            print("1. View Assigned Trips")
+            print("1. View Assigned Trips") 
             print("2. Update Trip Status")
             print("3. Logout")
 
